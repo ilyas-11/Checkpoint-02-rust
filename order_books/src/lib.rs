@@ -1,0 +1,24 @@
+//order_books level:4
+pub mod library{
+    pub mod writers{
+        use crate::library::books::Book;
+        pub struct Writer{
+            pub first_name : String,
+            pub last_name : String,
+            pub books : Vec<Book>,
+        }
+    }
+    pub mod books{
+        pub struct Book{
+            pub title : String,
+            pub year : u32,
+        }
+    }
+}
+pub use crate::library::writers::Writer;
+
+pub fn order_books(writer: &mut Writer) {
+    writer.books.sort_by(|a,b|{
+        a.title.to_lowercase().cmp(&b.title.to_lowercase())
+    });
+}

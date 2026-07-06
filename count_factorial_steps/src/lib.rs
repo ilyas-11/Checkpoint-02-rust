@@ -1,19 +1,18 @@
 //count_factorial_steps lev:2
-pub fn count_factorial_steps(factorial: u64) -> u64 {
-    if factorial <=1{
-        return 0;
+pub fn count_factorial_steps(f: u64) -> u64 {
+    if f<=1{
+        return 0
     }
-    let mut res = 1;
-    let mut step = 1;
-    while res<factorial{
+    let mut res = 1
+    let mut step=1;
+    while res<f{
         step+=1;
         res*=step;
     }
-    if res ==factorial{
-        step
-    }else {
-        0
+    if res==f{
+        return step
     }
+    0
 }
 
 

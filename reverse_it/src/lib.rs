@@ -1,12 +1,11 @@
 //reverse_it lev:1
 pub fn reverse_it(v: i32) -> String {
-    let mut sign= String::new();
-     if v<0{
-        sign="-".to_string();
-     }
-     let s= v.abs().to_string();
-     let rev:String=s.chars().rev().collect();
-     format!("{}{}{}",sign,rev,s)
+  let s = v.abs().to_string();
+  let rev:String= s.chars().rev().collect();
+  if v<0{
+    return format!("-{}{}",rev,s);
+  }
+  format!("{}{}",rev,s)
 }
 #[test]
 fn reverse_it_test() {

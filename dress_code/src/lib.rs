@@ -1,3 +1,4 @@
+//dress_code level: 3
 #[derive(Debug, PartialEq, Eq)]
 pub enum Jacket{
     Black,
