@@ -1,3 +1,4 @@
+// prime_checker level:4
 #[derive(PartialEq, Eq, Debug)]
 pub enum PrimeErr {
     Even,
